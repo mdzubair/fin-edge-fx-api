@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import app from "./configs/app";
 import connectDB from "./configs/database";
 
