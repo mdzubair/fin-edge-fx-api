@@ -21,33 +21,12 @@ app.use(
 );
 
 // CORS
-// app.use(
-//   cors({
-//     origin: process.env.APP_URL,
-//     credentials: true,
-//   })
-// );
-
-
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://fin-edge-fx.vercel.app",
-];
-
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: process.env.APP_URL,
     credentials: true,
   })
 );
-
-
 
 // Body Parsers
 app.use(express.json());
