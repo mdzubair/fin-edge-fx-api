@@ -21,9 +21,17 @@ app.use(
 );
 
 // CORS
+// app.use(
+//   cors({
+//     origin: process.env.APP_URL,
+//     credentials: true,
+//   })
+// );
+
+
 app.use(
   cors({
-    origin: process.env.APP_URL,
+    origin: "https://fin-edge-fx.vercel.app",
     credentials: true,
   })
 );
