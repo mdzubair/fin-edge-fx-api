@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import path from "path";
 
-
 import routeStarter from "../routes";
 
 dotenv.config();
